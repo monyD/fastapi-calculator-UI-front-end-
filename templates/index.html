@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FastAPI Calculator</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculator</h1>
+    <form method="post" action="/">
+      <div class="row">
+        <input type="text" name="a" placeholder="First number" />
+        <input type="text" name="b" placeholder="Second number" />
+      </div>
+      <select name="op">
+        <option value="add">Add (+)</option>
+        <option value="sub">Subtract (-)</option>
+        <option value="mul">Multiply (*)</option>
+        <option value="div">Divide (/)</option>
+      </select>
+      <button type="submit">Calculate</button>
+    </form>
+
+    {% if result is defined %}
+      <div class="result">Result: {{ result }}</div>
+    {% endif %}
+  </div>
+</body>
+</html>

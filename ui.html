@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculator — Client-side UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculator (Client-side)</h1>
+    <form id="calcForm">
+      <div class="row">
+        <input id="a" type="text" placeholder="First number" autocomplete="off">
+        <input id="b" type="text" placeholder="Second number" autocomplete="off">
+      </div>
+      <select id="op">
+        <option value="add">Add (+)</option>
+        <option value="sub">Subtract (-)</option>
+        <option value="mul">Multiply (*)</option>
+        <option value="div">Divide (/)</option>
+      </select>
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="result" class="result" style="display:none"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
